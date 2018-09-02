@@ -1,0 +1,63 @@
+.page-header {
+  background-color: @color-dark-blue;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 80%);
+  padding-bottom: 200px;
+
+  &__logotype {
+    display: flex;
+    align-items: center;
+    width: min-content;
+    margin: 0;
+    font-family: 'Barlow', 'Arial', sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  &__decor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    min-height: 40px;
+    background-color: @color-blue;
+    margin-right: 10px;
+  }
+
+  &__inner {
+    padding: 10px 10px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__toggle {
+    box-sizing: border-box;
+    width: 40px;
+    min-height: 25px;
+    position: relative;
+
+    & span {
+      position: absolute;
+      display: block;
+      width: inherit;
+      height: 2px;
+      background-color: @color-text;
+
+      &:first-child {
+        top: 0;
+      }
+
+      &:nth-child(2) {
+        top: 11px;
+      }
+
+      &:last-child {
+        top: 22px;
+      }
+    }
+  }
+}

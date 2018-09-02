@@ -1,0 +1,54 @@
+.main-nav {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0;
+
+  &--closed {
+    display: none;
+  }
+
+  &--opened {
+    display: block;
+    background-color: @color-dark-blue;
+  }
+
+  &__item {
+    text-align: center;
+  }
+
+  &__link {
+    display: block;
+    position: relative;
+    padding: 20px 0;
+    font-family: 'Barlow', 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: @color-text;
+    letter-spacing: 0.048em;
+    text-transform: uppercase;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background-color: @color-text;
+      top: 50%;
+      left: 50%;
+      transform: translateY(-50%) translateX(-50%);
+      transition: width 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &::before {
+        width: 100px;
+        transition: width 0.3s ease-in-out;
+      }
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
