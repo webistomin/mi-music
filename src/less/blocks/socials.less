@@ -1,3 +1,26 @@
 .socials {
 
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    display: block;
+    padding: 20px;
+    font-size: 0;
+
+    &:hover,
+    &:focus {
+      background-color: @color-blue;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__icon {
+    fill: @color-text;
+  }
 }
