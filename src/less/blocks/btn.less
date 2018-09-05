@@ -12,6 +12,14 @@
   text-align: center;
   padding: 10px 0;
   transition: all 0.3s ease-in-out;
+  z-index: 1;
+
+  &--disabled {
+    pointer-events: none;
+    cursor: default;
+    border-color: rgba(255, 255, 255, 0.1);
+    color: @color-pink;
+  }
 
   &::before {
     width: 0;
