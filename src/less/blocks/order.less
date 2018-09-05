@@ -1,7 +1,10 @@
 .order {
+  position: relative;
   background-color: @color-dark-blue--second;
   margin-top: -100px;
   padding-top: 100px;
+  overflow-x: hidden;
+
 
   &__title {
     margin: 0 auto;
@@ -19,6 +22,13 @@
     min-height: 80px;
     background-color: @color-dark-blue;
     text-transform: uppercase;
+  }
+
+  &__btn {
+    &:hover .order__calendar {
+      display: none;
+      background-color: @color-blue;
+    }
   }
 
   &__date {
@@ -94,8 +104,10 @@
     font-size: 18px;
     display: block;
     text-align: center;
+    padding: 40px 0;
 
-    &:hover {
+    &:hover,
+    &:focus {
       color: @color-lightgreen;
     }
 
@@ -103,6 +115,7 @@
       opacity: 0.5;
     }
   }
+
 
 
 }
