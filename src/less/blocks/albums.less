@@ -1,0 +1,53 @@
+.albums {
+  padding-top: 50px;
+  padding-bottom: 200px;
+  background-color: @color-dark-blue;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+
+  &__title {
+    min-width: 230px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  &__desc {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: @color-text--second;
+    text-align: center;
+  }
+
+  &__inner {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__link {
+    display: block;
+    transition: all 0.3s ease-in-out;
+
+    &--decor {
+      text-align: center;
+      font-family: 'Barlow', 'Arial', sans-serif;
+      font-weight: 500;
+      font-size: 18px;
+      color: @color-text;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
+  }
+}
